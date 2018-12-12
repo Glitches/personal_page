@@ -1,0 +1,38 @@
+{
+  "name": "personal_page",
+  "version": "0.0.1",
+  "description": "Portfolio page",
+  "main": "index.tsx",
+  "scripts": {
+    "test": "develop"
+  },
+  "keywords": [
+    "portfolio",
+    "personal",
+    "page",
+    "gatsby"
+  ],
+  "author": "Andrea Ceccarelli gltch2003@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "gatsby": "^2.0.65",
+    "gatsby-plugin-postcss": "^2.0.0-rc.5",
+    "gatsby-plugin-typescript": "^2.0.3",
+    "node-sass": "^4.11.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "typescript": "^3.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "gatsby-plugin-eslint": "^2.0.1",
+    "gatsby-plugin-sass": "^2.0.0-rc.2",
+    "prettier": "^1.15.3",
+    "prettier-eslint": "^8.8.2",
+    "typescript-eslint-parser": "^21.0.2"
+  }
+}

@@ -1,0 +1,21 @@
+version: "3.1"
+
+services:
+  gatsby:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+      # develop:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   # command: gatsby develop -H 0.0.0.0
+  #
+  #     tty: true
+  #   volumes:
+  #     - .:/app
