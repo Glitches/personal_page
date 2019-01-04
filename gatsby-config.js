@@ -1,7 +1,15 @@
 module.exports = {
   plugins: [
     'gatsby-plugin-sass',
-    'gatsby-plugin-postcss',
+    {
+      resolve: 'gatsby-plugin-postcss',
+      options: [
+        {
+          test: /\.css$/,
+          include: /reflexy/,
+        },
+      ],
+    },
     'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-plugin-eslint',

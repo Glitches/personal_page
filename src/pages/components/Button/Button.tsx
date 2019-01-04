@@ -4,7 +4,7 @@ import './button.scss';
 
 export type ButtonColor = 'red' | 'blue' | 'white';
 export interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   color: ButtonColor;
   label: string;
   onClick: () => void;

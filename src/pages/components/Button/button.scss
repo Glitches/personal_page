@@ -1,22 +1,14 @@
-@font-face {
-  font-family: "Amstelvar-Roman-parametric-Vf";
-  font-style: normal;
-  line-height: 1rem;
-  font-weight: 500;
-  src: url("../../../lib/fonts/Amstelvar-Roman-parametric-VF.ttf") format("ttf");
-}
-
 .Button {
   background-color: white;
   border: 0.15rem solid #475257;
-  border-radius: 7%;
+  border-radius: 15%;
   display: table;
   padding: 0.3rem 0.5rem;
 
   .button-label {
     display: table-cell;
-    font-family: "Amstelvar-Roman-parametric-VF";
-    font-size: 1rem;
+    // font-family: "Amstelvar-Roman-parametric-VF";
+    font-size: 3rem;
     font-style: normal;
     margin: auto 0;
     overflow: hidden;

@@ -1,3 +1,7 @@
 FROM node:alpine
-RUN npm install --global gatsby-cli\
+
+RUN npm i -g\
+  gatsby-cli@latest\
   git 
+
+WORKDIR /app
