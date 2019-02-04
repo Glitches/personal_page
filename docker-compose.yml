@@ -8,16 +8,5 @@ services:
     tty: true
     volumes:
       - .:/app
-    ports:
-      - "8000:8000"
-    name:
-      personal_page
-      # develop:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   # command: gatsby develop -H 0.0.0.0
-  #
-  #     tty: true
-  #   volumes:
-  #     - .:/app
+    ports: ["127.0.0.1:8000:8000"]
+    container_name: personal_page
