@@ -1,0 +1,17 @@
+@import "../../index";
+
+.base {
+  .Header-bar {
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #ccccff;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
+    display: flex;
+    font-family: "Amstelvar-Roman-parametric-VF";
+    height: 10vh;
+    margin: 0 auto;
+    width: 100vw;
+    top: 0;
+  }
+}

@@ -11,8 +11,10 @@ export interface Props {
 }
 
 export const Button: React.StatelessComponent<Props> = (props: Props) => (
-  <button className="Button" onClick={props.onClick}>
-    <div className="button-label">{props.label}</div>
-    <div>{props.children}</div>
-  </button>
+  <React.Fragment>
+    <button className="Button" onClick={props.onClick}>
+      <div className="button-label">{props.label}</div>
+      <div>{props.children}</div>
+    </button>
+  </React.Fragment>
 );

@@ -6,4 +6,12 @@
     font-weight: 500;
     src: url("../lib/fonts/Amstelvar-Roman-parametric-VF.ttf") format("ttf");
   }
+
+  html,
+  body,
+  div,
+  span,
+  p {
+    font-family: "Amstelvar-Roman-parametric-VF";
+  }
 }
