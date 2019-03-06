@@ -9,8 +9,10 @@ RUN npm i -g\
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+
 EXPOSE 8000
 
 WORKDIR /app
 
+RUN npm install
 RUN zsh

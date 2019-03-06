@@ -1,4 +1,4 @@
-@import "../../index";
+@import "../../../pages/index";
 
 .base {
   .Button {
@@ -11,7 +11,6 @@
 
     .button-label {
       display: table-cell;
-      font-family: "Amstelvar-Roman-parametric-VF";
       font-size: 1rem;
       font-style: normal;
       margin: auto 0;

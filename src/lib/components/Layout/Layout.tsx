@@ -1,39 +1,36 @@
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core';
-import React from 'react';
+import { css, jsx } from "@emotion/core";
+import React from "react";
+import * as Header from "../Header";
 
-import './layout.scss';
+import "./layout.scss";
+import { some } from "fp-ts/lib/Option";
 
-interface Props {
-  maxWidth: number;
+export interface LayoutProps {
+	maxWidth: number;
 }
 
-export class Layout extends React.PureComponent<Props> {
-  renderHeader(children: React.ReactNode[] | JSX.Element | React.ReactNode) {
-    if (!Array.isArray(children)) {
-      return [children];
-    }
-    const childrens = children.map((child: React.ReactNode) => {
-      if (child.type.displayName === 'Header') {
-        const el = React.cloneElement(child, { maxWidth: this.props.maxWidth });
-        return el;
-      }
-      return child;
-    });
-    return childrens;
-  }
+export class Layout extends React.PureComponent<LayoutProps> {
+	private renderHeader = (children: React.ReactNode[] | JSX.Element | React.ReactNode) =>
+		React.Children.map(children, (child: React.ReactElement<Header.HeaderProps>) =>
+			some(child)
+				.map(child => {
+					if (child.type.name === Header.Header.name) {
+						return React.cloneElement(child, { maxWidth: this.props.maxWidth });
+					}
+					return child;
+				})
+				.toNullable()
+		);
 
-  render() {
-    return (
-      <div
-        className="Layout"
-        css={css`
-          width: ${this.props.maxWidth}vw;
-        `}
-      >
-        {this.renderHeader(this.props.children).map(el => el)}
-        <p>ciao andrea</p>
-      </div>
-    );
-  }
+	render = (): React.ReactNode => (
+		<div
+			className="Layout"
+			css={css`
+				width: ${this.props.maxWidth}vw;
+			`}
+		>
+			{this.renderHeader(this.props.children).map(el => el)}
+		</div>
+	);
 }

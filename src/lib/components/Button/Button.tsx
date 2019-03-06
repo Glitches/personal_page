@@ -1,20 +1,20 @@
-import React from 'react';
+import React from "react";
 
-import './button.scss';
+import "./button.scss";
 
-export type ButtonColor = 'red' | 'blue' | 'white';
-export interface Props {
-  children?: React.ReactNode;
-  color: ButtonColor;
-  label: string;
-  onClick: () => void;
+export type ButtonColor = "red" | "blue" | "white";
+export interface ButtonProps {
+	children?: React.ReactNode;
+	color: ButtonColor;
+	label: string;
+	onClick: () => void;
 }
 
-export const Button: React.StatelessComponent<Props> = (props: Props) => (
-  <React.Fragment>
-    <button className="Button" onClick={props.onClick}>
-      <div className="button-label">{props.label}</div>
-      <div>{props.children}</div>
-    </button>
-  </React.Fragment>
+export const Button: React.StatelessComponent<ButtonProps> = (props: ButtonProps) => (
+	<React.Fragment>
+		<button className="Button" onClick={props.onClick}>
+			<div className="button-label">{props.label}</div>
+			<div>{props.children}</div>
+		</button>
+	</React.Fragment>
 );
