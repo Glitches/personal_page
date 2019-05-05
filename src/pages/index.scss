@@ -1,17 +1,16 @@
+@import "font";
+
+body {
+  background-color: #173f5f;
+  font-family: $roboto-slab;
+}
+
 .base {
-  // @font-face {
-  //   font-family: "Amstelvar-Roman-parametric-Vf";
-  //   font-style: normal;
-  //   line-height: 1rem;
-  //   font-weight: 500;
-  //   src: url("../../static/fonts/Amstelvar-Roman-parametric-VF.ttf") format("ttf");
-  // }
   html,
-  body,
   div,
   span,
   p {
-    font-family: "Sans Serif";
+    color: #fff;
   }
 
   .body-content {

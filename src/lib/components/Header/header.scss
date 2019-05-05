@@ -4,15 +4,32 @@
   .Header-bar {
     align-items: center;
     box-sizing: border-box;
-    background-color: #ccccff;
-    border-radius: 6px 6px 6px 6px;
-    box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
+    // box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
     display: flex;
     justify-content: center;
     align-content: center;
-    font-family: "Sans serif";
+    font-family: "Amstelvar-Roman-parametric-Vf";
+    font-variation-settings: "wdth" 800, "wght" 200, "slnt" 40;
     height: 10vh;
-    margin: 0 auto;
-    top: 0;
+    // margin: 0 auto;
+    // top: 0;
+    position: relative;
+    border: 5px solid transparent;
+    border-radius: 1em;
+    background-clip: padding-box;
+    background-color: #173f5f;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -5px; /* !importanté */
+      border-radius: inherit; /* !importanté */
+      background: linear-gradient(to right, #3caea3, #f6d55c);
+    }
   }
 }

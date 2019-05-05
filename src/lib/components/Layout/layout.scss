@@ -5,10 +5,26 @@
     margin: 0 auto;
     padding: 1vh 0 0 0;
     height: 100vh;
-    background-color: rebeccapurple;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
+    border: 5px solid transparent;
+    border-radius: 1em;
+    background-clip: padding-box;
+    background-color: #173f5f;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -5px; /* !importanté */
+      border-radius: inherit; /* !importanté */
+      background: linear-gradient(to right, #3caea3, #f6d55c);
+    }
   }
 }
