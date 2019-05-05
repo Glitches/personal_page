@@ -1,0 +1,10 @@
+@import "../../../pages/index";
+
+.base {
+  .title {
+    > div {
+      width: fit-content;
+      font-size: 2rem;
+    }
+  }
+}
