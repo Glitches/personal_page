@@ -1,5 +1,9 @@
 @import "font";
 
+$color-yellow: #f6d55c;
+$color-azure: #3caea3;
+$color-cobalt: #173f5f;
+
 body {
   background-color: #173f5f;
   font-family: $roboto-slab;
@@ -11,6 +15,10 @@ body {
   span,
   p {
     color: #fff;
+  }
+
+  a {
+    color: $color-yellow;
   }
 
   .body-content {

@@ -13,8 +13,12 @@ const app: React.StatelessComponent = () => (
       </Header>
       <div className="body-content">
         <code>
-          Front-end engineer at <a href="https://www.facile.it" target="_blank">Facile.it</a>
-          </code>
+          Front-end engineer at
+          {' '}
+          <a href="https://www.facile.it" target="_blank">
+            Facile.it
+          </a>
+        </code>
       </div>
     </Layout>
   </div>

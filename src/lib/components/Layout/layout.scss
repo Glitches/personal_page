@@ -13,7 +13,7 @@
     border: 5px solid transparent;
     border-radius: 1em;
     background-clip: padding-box;
-    background-color: #173f5f;
+    background-color: $color-cobalt;
     &:before {
       content: "";
       position: absolute;
@@ -24,7 +24,7 @@
       z-index: -1;
       margin: -5px; /* !importanté */
       border-radius: inherit; /* !importanté */
-      background: linear-gradient(to right, #3caea3, #f6d55c);
+      background: linear-gradient(to right, $color-azure, $color-yellow);
     }
   }
 }
