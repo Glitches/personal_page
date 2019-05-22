@@ -1,9 +1,10 @@
 import React from 'react';
-
-import './index.scss';
 import { Header } from '../lib/components/Header';
 import { Layout } from '../lib/components/Layout/Layout';
 import { Title } from '../lib/components/Title';
+import { Image } from '../lib/components/Image';
+
+import './index.scss';
 
 const app: React.StatelessComponent = () => (
   <div className="base">
@@ -20,6 +21,7 @@ const app: React.StatelessComponent = () => (
           </a>
         </code>
       </div>
+      <Image />
     </Layout>
   </div>
 );
