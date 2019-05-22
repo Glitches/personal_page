@@ -7,11 +7,16 @@ Source code for my personal page.
 - Docker Compose
 - React
 - TypeScript
+- Sass
 
 ## Usage
 
-Download the repo, make Docker work on your pc and then:
+Download the repo, get Docker and Docker Compose working on your machine and then:
 
-- npm install
-- docker-compose up
-- docker exec -ti personal_page bash
+```
+./starh.sh
+
+# from the container
+
+gatsby develop -H 0.0.0.0
+```
