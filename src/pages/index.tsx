@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Header } from '../lib/components/Header';
 import { Layout } from '../lib/components/Layout/Layout';
 import { Title } from '../lib/components/Title';
@@ -16,7 +16,7 @@ const app: React.StatelessComponent = () => (
         <code>
           Front-end engineer at
           {' '}
-          <a href="https://www.facile.it" target="_blank">
+          <a href="https://www.facile.it" rel="noopener noreferrer" target="_blank">
             Facile.it
           </a>
         </code>
