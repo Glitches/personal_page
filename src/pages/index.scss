@@ -22,10 +22,11 @@ body {
   }
 
   .body-content {
+    text-align: center;
     margin: 3vh 1vw;
     padding: 1vh 2vw;
     border-radius: 10px;
-    border-bottom: thin;
+    border: thin;
     border-style: solid;
     border-color: gray;
   }

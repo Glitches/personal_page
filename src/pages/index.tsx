@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Header } from '../lib/components/Header';
 import { Layout } from '../lib/components/Layout/Layout';
 import { Title } from '../lib/components/Title';
-import { Image } from '../lib/components/Image';
 
 import './index.scss';
 
@@ -13,15 +12,24 @@ const app: React.StatelessComponent = () => (
         <Title label="Andrea Ceccarelli" />
       </Header>
       <div className="body-content">
-        <code>
+        <p>
           Front-end engineer at
           {' '}
           <a href="https://www.facile.it" rel="noopener noreferrer" target="_blank">
             Facile.it
           </a>
-        </code>
+        </p>
+        <p>
+          Currently developing beautiful things in React, Typescript.
+        </p>
+
+        <p>
+          You can find me somewhere in Milan or on{' '}
+          <a href="https://www.github.com/glitches" rel="noopener noreferrer" target="_blank">
+            Github
+          </a>
+        </p>
       </div>
-      <Image />
     </Layout>
   </div>
 );
