@@ -1,0 +1,19 @@
+@import "../../../pages/index";
+
+.base {
+    .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+
+        .tab-element {
+            font-size: 16px;
+            font-weight: 800;
+
+            &.selected {
+                text-decoration: underline;
+            }
+        }
+    }
+}

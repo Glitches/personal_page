@@ -4,7 +4,7 @@
   .Layout {
     margin: 0 auto;
     padding: 1vh 0 0 0;
-    height: 100vh;
+    height: 96vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -14,6 +14,7 @@
     border-radius: 1em;
     background-clip: padding-box;
     background-color: $color-cobalt;
+
     &:before {
       content: "";
       position: absolute;
