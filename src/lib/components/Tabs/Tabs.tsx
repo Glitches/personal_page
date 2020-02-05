@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
 import './tabs.scss'
 
 export type TabType = {
@@ -12,30 +13,28 @@ export interface Props {
 }
 
 export const Tabs: React.FC<Props> = ({ tabs }) => {
-    const [selectedState, setSelected] = React.useState('home')
-    const selectedRef = React.useRef<HTMLDivElement>(null)
-    const width = selectedRef.current ? selectedRef.current.offsetWidth : '1rem'
-
-    console.log(selectedRef.current ? selectedRef.current.getClientRects : null)
+    const path = window.location.href
+    const [selectedState, setSelected] = React.useState()
     return (
         <div className="tabs-line">
             <div className='tabs'>
                 {
                     tabs.map((tab: TabType, index: number) => (
                         <>
-                            <div
-                                className={`tab-element ${selectedState === tab.label ? 'selected' : null}`}
+                            <Link
+
+                                activeClassName={path.match(tab.label) ? 'selected' : null}
+                                className='tab-element '
                                 key={index + tab.label}
-                                ref={selectedState === tab.label ? selectedRef : null}
                                 onClick={() => setSelected(tab.label)}
+                                to={tab.href}
                             >
                                 {tab.label}
-                            </div>
+                            </Link>
                         </>
                     ))
                 }
             </div>
-            <div className="tab-element-selected" style={{ width: width }} />
         </div>
     )
 }

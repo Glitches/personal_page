@@ -1,27 +1,27 @@
 @import "../../../pages/index";
 
 .base {
-    .tabs {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+    .tabs-line {
         width: 100%;
 
-        .tab-element {
-            position: relative;
-            font-size: 16px;
-            font-weight: 800;
-            cursor: pointer;
+        > .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
 
-            &.selected {
+            > .tab-element {
+                text-decoration: none;
+                color: white;
+                position: relative;
+                font-size: 16px;
+                font-weight: 800;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+
+                &.selected {
+                    border-bottom: thick solid $color-yellow;
+                }
             }
         }
-    }
-
-    .tab-element-selected {
-        position: absolute;
-        content: ' ';
-        height: 1rem;
-        background-color: red;
     }
 }
