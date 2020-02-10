@@ -16,7 +16,7 @@ export class Header extends React.PureComponent<Props> {
   private sticky = css`
     position: sticky;
     top: 1vh;
-    width: ${this.calcWidth()}vw;
+    width: ${this.calcWidth()}px;
   `;
 
   private fixed = css`
