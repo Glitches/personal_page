@@ -7,17 +7,15 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    // font-family: "Amstelvar-Roman-parametric-Vf";
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     font-weight: 200;
-    // font-variation-settings: "wdth" 800, "wght" 200, "slnt" 40;
-    height: 10vh;
     position: relative;
     border: 5px solid transparent;
     border-radius: 1em;
     background-clip: padding-box;
     background-color: $color-cobalt;
     margin-bottom: 2rem;
+    padding: 1rem;
     margin-top: 2rem;
 
     &:before {
@@ -28,7 +26,7 @@
       bottom: 0;
       left: 0;
       z-index: -1;
-      margin: -5px; /* !importanté */
+      margin: -4px; /* !importanté */
       border-radius: inherit; /* !importanté */
       background: linear-gradient(to right, $color-azure, $color-yellow);
     }

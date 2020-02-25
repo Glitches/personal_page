@@ -12,18 +12,5 @@
     border-radius: 1em;
     background-clip: padding-box;
     background-color: $color-cobalt;
-
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      margin: -5px; /* !importanté */
-      border-radius: inherit; /* !importanté */
-      background: linear-gradient(to right, $color-azure, $color-yellow);
-    }
   }
 }

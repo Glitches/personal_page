@@ -10,14 +10,14 @@ const width = document.body.clientWidth;
 export const Wrapper = ({ children }) => (
   <Layout maxWidth={(width * 99) / 100} maxHeight={(eight * 99) / 100}>
     <Header display="sticky">
-      <Title label="Code? Yes, Code!" />
+      <Title label="Yes, I Code!" />
     </Header>
     <Tabs
       tabs={[
         {
           label: 'home',
           selected: true,
-          href: '/home',
+          href: '/',
         },
         {
           label: 'blog',
