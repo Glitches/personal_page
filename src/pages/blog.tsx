@@ -1,29 +1,34 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import PostLink from './post-link';
 
-export default function Template(props) {
-  console.log(props);
-  const { markdownRemark } = props; // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark;
-  return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
-    </div>
-  );
-}
+const IndexPage = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => {
+  const Posts = edges
+    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
+
+  return <div>{Posts}</div>;
+};
+
+export default IndexPage;
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        path
-        title
+  query {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            path
+            title
+          }
+        }
       }
     }
   }

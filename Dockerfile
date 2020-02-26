@@ -5,7 +5,7 @@ RUN apk update && apk add \
   git
 
 RUN npm i -g\
-  gatsby-cli@latest
+  gatsby-cli@latest npm
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
